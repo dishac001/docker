@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dishachaudhari/docker:latest
     - name: push docker image
-      run: docker login -u dishachaudhari -p ${{ secrets.DOCKER }} docker push dishachaudhari/docker:latest
+      run: docker login -u dishachaudhari -p ${{ secrets.DOCKER }} && docker push dishachaudhari/docker:latest
